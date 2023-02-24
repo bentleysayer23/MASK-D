@@ -1,0 +1,75 @@
+---
+import "@fontsource/orbitron";
+import LordPassImage from './LordPassImage.astro';
+---
+<section class="lord-pass-info">
+    <div id="Lords" class="lord-pass-details">
+        <h1>Lord Pass Details</h1>
+        <ul>
+            <li>150 Passes Available</li>
+            <li>100% of Lord Pass Royalties (until mint of season 1)</li>
+            <li>Guaranteed mint of 2 NFTs during Lord Pass mint window for season 1</li>
+            <li>Guaranteed mint of 3 NFTs during Gunner Pass mint window for season 1</li>
+            <li>3% of the mint revenue (10,000) Ada will be divided equally and airdropped to qualified Lord Pass holders AFTER the mint has sold out</li>
+            <li>To Qualify: you must be holding 2 of your Lord minted NFTs for a minimum of 48 hours AFTER the mint has sold out (snapshot of Lord wallets will be done at this time)</li>
+            <li>If floor price ever falls below mint price, we will buy back 1 of your MASK'D NFTs at mint price</li>
+            <li>Exclusive access to our LORD discord and Q&A with founders</li>
+            <li>Early access to info on future content</li>
+            <li>10/100 QR code trait characters will be included in the LORD mint window for season 1</li>
+            <li>Access to GUNNERS Circle and LORDS Council chats</li>
+            <li>1 Gifted NFT for MASK'D Season 2</li>
+        </ul>
+    </div>
+    <div class="lord-pass-img">
+        <LordPassImage/>
+    </div>
+</section>
+
+<style>
+    .lord-pass-info {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 100px 0px;
+        color: #FFFFFF;
+        padding: 30px 0px;
+    }
+    .lord-pass-details {
+        scroll-margin-top: 100px;
+        padding: 50px 20px;
+    }
+    .lord-pass-details h1{
+        font-family: "Orbitron";
+        font-size: 2em;
+        margin: 0px;
+        padding-bottom: 20px;
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+    }
+    .lord-pass-details ul {
+        padding: 20px;
+    }
+    .lord-pass-details li{
+        font-size: .9em;
+        line-height: 2.0em;
+    }
+    .lord-pass-img {
+        width: 100%;
+    }
+
+    @media (min-width: 64em) {
+        .lord-pass-info {
+            flex-direction: row;
+        }
+        .lord-pass-details {
+            padding: 0px 30px;
+        }
+        .lord-pass-details h1{
+            font-size: 3em;
+        }
+        .lord-pass-details li{
+            font-size: 1.2em;
+            line-height: 2.4em;
+        }
+    }
+</style>
+

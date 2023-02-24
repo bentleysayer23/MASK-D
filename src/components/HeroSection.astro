@@ -1,0 +1,110 @@
+---
+import "@fontsource/orbitron";
+import HeroImage from '/Vector.svg';
+import GrayWall from '/gray-wall.svg';
+---
+
+<section class="hero">
+    <div class="hero-text">
+        <h1 class="green">Chapter 1</h1>
+        <h1>Hostile Takeover</h1>
+        <h3>War. Desruction. Chaos</h3>
+        <div class="text-underline"/>
+        <p>
+            Worldly tensions are escalating rapidly across the globe.
+            Fears of war, destruction, and economic collapse are plaguing the minds of humanity as we know it.
+            Under these types of catastrophic circumstances, history and science provide one sure guarantee... 
+            ONLY THE STRONG WILL SURVIVE!!
+        </p>
+        <div class="ctas">
+            <button class="filled">Join Discord</button>
+            <button class="outlined">Learn More</button>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src={HeroImage}/>
+    </div>
+</section>
+
+<style>
+    .hero{
+        width: 100%;
+        display: flex;
+        color: #FFFFFF;
+        background-image: url('/gray-wall.svg');
+        background-size: contain;
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+    .hero-text{
+        width: 50%;
+        padding: 50px 100px;
+    }
+    .hero-text h1{
+        font-size: 50px;
+        padding-bottom: 10px;
+        margin: 0px;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+    }
+    .hero-text h3{
+        font-size: 30px;
+        font-family: "Orbitron";
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+    .text-underline{
+        width: 30%;
+        height: 2px;
+        background-color: #FFFFFF;
+    }
+    .hero-text p{
+        padding-top: 50px;
+        font-size: 25px;
+        line-height: 50px;
+    }
+    .hero-image{
+        display: grid;
+        place-items: center;
+        width: 50%;
+    }
+    .hero-image img{
+        height: 100%;
+        width: auto;
+    }
+    .green {
+        color: #55BCB6;
+    }
+    .ctas{
+    display: flex;
+    column-gap: 20px;
+    padding-top: 50px;
+    }
+    .outlined {
+        background-color : transparent;
+        border: 1px solid #FFFFFF;
+        border-radius: 15;
+        height: 50px;
+        padding: 0px 30px; 
+        color: #FFFFFF;
+        font-family: "Orbitron";
+        cursor: pointer;
+    }
+    .outlined:hover{
+        opacity: .5;
+    }
+    .filled {
+        background-color : #55BCB6;
+        border: 1px solid #FFFFFF;
+        border-radius: 15;
+        height: 50px;
+        padding: 0px 30px; 
+        color: #FFFFFF;
+        font-family: "Orbitron";
+        cursor: pointer;
+    }
+    .filled:hover{
+        background-color: #429590;
+        opacity: .5;
+    }
+</style>

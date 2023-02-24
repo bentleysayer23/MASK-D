@@ -1,0 +1,23 @@
+.Clock-Wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.Clock-Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.8em;
+  color: #ffffff;
+  padding: 20px;
+}
+.Clock-Box p {
+  margin: 0px;
+}
+
+@media (min-width: 35em) {
+  .Clock-Box {
+    font-size: 2.5em;
+  }
+}

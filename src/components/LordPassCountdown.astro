@@ -1,0 +1,107 @@
+---
+import "@fontsource/orbitron";
+import CountdownTimer from "./Timer";
+---
+
+
+<section id="Home" class="lords-countdown">
+    <div class="lord-text">
+        <div class="headline">
+            <h1 class="green">Welcome,</h1>
+            <h1>Lords</h1>
+        </div>
+        <h3>Lord Pass Minting Will Begin In:</h3>
+        <CountdownTimer client:load/>
+        <h5>Minting begins February 27 at 8:00 a.m. PST</h5>
+        <a href="#Lords" class="filled flex">Lord Pass Info</a>
+    </div>
+</section>
+
+<style>
+    .lords-countdown{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: url('/gray-wall.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #FFFFFF;
+        padding: 100px 0px;
+        margin-top: 100px;
+        scroll-margin-top: 100px;
+    }
+    .lord-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+        font-family: "Orbitron";
+    }
+    .green {
+        color: #55BCB6;
+    }
+    .headline{
+        display: flex;
+        column-gap: 15px;
+    }
+    .lord-text h1{
+        font-size: 2em;
+        padding-bottom: 10px;
+        margin: 0px;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+    }
+    .lord-text h3{
+        font-size: 1.2em;
+        font-family: "Orbitron";
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+    .lord-text h5 {
+        font-size: .8em;
+    }
+    .filled {
+        align-items: center;
+        background-color : #55BCB6;
+        border: 1px solid #FFFFFF;
+        border-radius: 15;
+        height: 50px;
+        padding: 0px 30px; 
+        color: #FFFFFF;
+        font-family: "Orbitron";
+        cursor: pointer;
+    }
+    .filled:hover{
+        background-color: #429590;
+        opacity: .7;
+    }
+
+    @media (min-width: 64em) {
+    .lords-countdown{
+            position: static;
+            background-image: url("/big-wall.png");
+            background-size: 112% 135%;
+            background-position: unset;
+            background-position-x: -200px;
+            background-position-y: 30%;
+            padding: 200px 0px;
+        }
+    .lord-text {
+            row-gap: 50px;
+        }
+    .lord-text h1{
+        font-size: 3em;
+    }
+    .lord-text h3{
+        font-size: 1.5em;
+        }
+
+    .lord-text h5{
+        font-size: 1.0em;
+        }
+    }
+
+</style>

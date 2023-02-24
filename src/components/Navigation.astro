@@ -1,0 +1,44 @@
+---
+import Logo from '/logo.svg';
+import Twitter from '/twitter.svg';
+import Discord from '/discord.svg';
+---
+
+<header class="primary-header flex">
+    <a href="https://maskdcnft.com"><img class="logo" src={Logo}/></a>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"></button>
+    <nav>
+        <ul data-visible="false" id="primary-navigation" class="primary-navigation flex">
+           <li class="active"> <a href="#Home">Home</a> </li>
+            <li><a href="#Lords">Lords</a> </li>
+            <li><a href="#Roadmap">Roadmap</a> </li>
+            <li><a href="https://twitter.com/maskd_cnft"> <img src={Twitter}/> </a> </li>
+            <li><a href="https://discord.gg/qtZ9qEqwJc"> <img src={Discord}/> </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    const primaryNav = document.querySelector('.primary-navigation');
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+
+   navToggle?.addEventListener('click', () => {
+       const visible = primaryNav?.getAttribute("data-visible");
+       if(visible === "false") {
+        navToggle.setAttribute('aria-expanded', "true");
+        return primaryNav?.setAttribute('data-visible', "true");
+        }
+        navToggle.setAttribute('aria-expanded', "true");
+        return primaryNav?.setAttribute('data-visible', "false");
+
+    }); 
+
+    const NavItems = document.querySelectorAll('.primary-navigation li');
+      for(const navItem of NavItems) {
+            navItem.addEventListener('click', function (){ 
+            const current = document.getElementsByClassName("active");
+            current[0].classList.remove("active");
+            navItem.classList.add("active");
+        });
+        }
+</script>

@@ -1,0 +1,33 @@
+---
+import "@fontsource/inter";
+import HeroSection from "../components/HeroSection.astro";
+import LordPassCountdown from "../components/LordPassCountdown.astro";
+import LordPassInfo from "../components/LordPassInfo.astro";
+import Navigation from '../components/Navigation.astro';
+import SiteArt from "../components/SiteArt.astro";
+import "../styles/globals.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/svg" href="/favicon.svg"/>
+    <title>MASK'D CNFT</title>
+  </head>
+    <body>
+    <Navigation/>
+    <LordPassCountdown/>
+    <LordPassInfo/>
+    <SiteArt/>
+    <footer class="flex">
+            <h5>Lords Pass Policy ID: bc36024fd8f52410173f401430b4ba7575bab822d896b7772caafd3a</h5>
+    </footer>
+        <script>
+        document?.querySelector('.hamburger')?.addEventListener('click', () => {
+        document?.querySelector('.nav-links')?.classList.toggle('expanded');
+        document?.querySelector('body')?.classList.toggle('hidden');
+            });
+        </script>
+    </body>
+</html>
