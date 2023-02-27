@@ -1,0 +1,147 @@
+---
+import "@fontsource/orbitron";
+---
+
+
+<section id="Home" class="mint-area">
+    <div class="lord-text">
+        <div class="headline">
+            <h1 class="green">Welcome,</h1>
+            <h1>Lords</h1>
+        </div>
+        <h3>Lord Pass Minting Is Live!</h3>
+        <img src="https://studio.nmkr.io/images/buttons/paybutton_3_2.svg" onclick="javascript:openPaymentWindow()">
+        <h3>OR</h3>
+        <h5 class="info">Send 150 Ada to mint address: </h5>
+        <h5 class="info">addr1vx80mm6h2v4zh2xuhxdr8nwvtt9wjdjrr29qphwthju8dmqj66lyg</h5>
+        <a href="#Lords" class="filled flex">Lord Pass Info</a>
+    </div>
+</section>
+<script type="text/javascript">
+            function openPaymentWindow() {
+                const paymentUrl = "https://pay.nmkr.io/?p=3be05d0ae2f7474996c6cbd641b1d0ea&c=1";
+
+                // Specify the popup width and height
+                const popupWidth = 500;
+                const popupHeight = 700;
+
+                // Calculate the center of the screen
+                const left = window.top.outerWidth / 2 + window.top.screenX - ( popupWidth / 2);
+                const top = window.top.outerHeight / 2 + window.top.screenY - ( popupHeight / 2);
+
+                const popup =  window.open(paymentUrl, "NFT-MAKER PRO Payment Gateway",  `popup=1, location=1, width=${popupWidth}, height=${popupHeight}, left=${left}, top=${top}`);
+
+                // Show dim background
+                document.body.style = "background: rgba(0, 0, 0, 0.5)";
+
+                // Continuously check whether the popup has been closed
+                const backgroundCheck = setInterval(function () {
+                    if(popup.closed) {
+                        clearInterval(backgroundCheck);
+
+                        console.log("Popup closed");
+
+                        // Remove dim background
+                        document.body.style = "";
+                    }
+                }, 1000);
+            }
+        </script>
+
+
+<style>
+    .mint-area{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: url('/gray-wall.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #FFFFFF;
+        padding: 100px 0px;
+        margin-top: 100px;
+        scroll-margin-top: 100px;
+    }
+    .lord-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+        font-family: "Orbitron";
+    }
+    .info {
+        font-family: "Inter";
+        font-size: 12px;
+    }
+    .green {
+        color: #55BCB6;
+    }
+    .headline{
+        display: flex;
+        column-gap: 15px;
+    }
+    .lord-text h1{
+        font-size: 2em;
+        padding-bottom: 10px;
+        margin: 0px;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+    }
+    .lord-text h3{
+        font-size: 1.2em;
+        font-family: "Orbitron";
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+    }
+    .lord-text h5 {
+        font-size: .6em;
+    }
+    .filled {
+        align-items: center;
+        background-color : #55BCB6;
+        border: 1px solid #FFFFFF;
+        border-radius: 15;
+        height: 50px;
+        padding: 0px 30px; 
+        color: #FFFFFF;
+        font-family: "Orbitron";
+        cursor: pointer;
+    }
+    .filled:hover{
+        background-color: #429590;
+        opacity: .7;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    @media (min-width: 64em) {
+    .mint-area{
+            position: static;
+            background-image: url("/big-wall.png");
+            background-size: 112% 135%;
+            background-position: unset;
+            background-position-x: -200px;
+            background-position-y: 30%;
+            padding: 200px 0px;
+        }
+    .lord-text {
+            row-gap: 50px;
+        }
+    .lord-text h1{
+        font-size: 3em;
+    }
+    .lord-text h3{
+        font-size: 1.5em;
+        }
+
+    .lord-text h5{
+        font-size: 1.0em;
+        }
+    }
+
+</style>
